@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Mail, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Send, Instagram } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -75,6 +75,18 @@ const Contact = () => {
                                 <p className="text-sm text-muted-foreground">GitHub</p>
                                 <a href="https://github.com/Sasitamada" target="_blank" rel="noopener noreferrer" className="text-lg font-medium hover:text-purple-400 transition-colors">
                                     github.com/Sasitamada
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-4 group">
+                            <div className="p-4 rounded-full bg-card border border-border group-hover:bg-purple-500/10 group-hover:border-purple-500/50 transition-colors">
+                                <Instagram className="h-6 w-6 text-purple-400" />
+                            </div>
+                            <div>
+                                <p className="text-sm text-muted-foreground">Instagram</p>
+                                <a href="https://www.instagram.com/sasi__x___/" target="_blank" rel="noopener noreferrer" className="text-lg font-medium hover:text-purple-400 transition-colors">
+                                    @sasi__x___
                                 </a>
                             </div>
                         </div>
