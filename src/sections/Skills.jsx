@@ -1,5 +1,5 @@
 import React from "react";
-import { Laptop, Server, Database, Wrench, Code2 } from "lucide-react";
+import { Laptop, Server, Database, Wrench, Code2, Cloud, BrainCircuit } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Skills = () => {
@@ -7,12 +7,17 @@ const Skills = () => {
         {
             title: "Languages",
             icon: <Laptop className="text-purple-400 w-6 h-6" />,
-            skills: ["Python", "JavaScript", "HTML", "CSS", "SQL"],
+            skills: ["Python", "JavaScript", "C", "HTML", "CSS"],
+        },
+        {
+            title: "Technologies",
+            icon: <BrainCircuit className="text-purple-400 w-6 h-6" />,
+            skills: ["Machine Learning", "Deep Learning", "Generative AI", "AI Agent"],
         },
         {
             title: "Frameworks",
             icon: <Server className="text-purple-400 w-6 h-6" />,
-            skills: ["React.js", "Node.js", "Express.js"],
+            skills: ["React.js", "Tailwind CSS", "FastAPI"],
         },
         {
             title: "Databases",
@@ -20,9 +25,14 @@ const Skills = () => {
             skills: ["MySQL", "PostgreSQL"],
         },
         {
+            title: "Cloud",
+            icon: <Cloud className="text-purple-400 w-6 h-6" />,
+            skills: ["AWS (Amazon Web Services)", "Google Cloud Platform (GCP)"],
+        },
+        {
             title: "Tools",
             icon: <Wrench className="text-purple-400 w-6 h-6" />,
-            skills: ["Git", "GitHub"],
+            skills: ["Git", "GitHub", "VS Code"],
         },
     ];
 
@@ -37,11 +47,11 @@ const Skills = () => {
                         <Code2 className="h-6 w-6 text-purple-400" />
                     </div>
                     <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground text-center">
-                        My Skills
+                        Skills
                     </h2>
                 </div>
 
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {skillCategories.map((category, idx) => (
                         <Card
                             key={idx}

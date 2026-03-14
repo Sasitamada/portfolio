@@ -9,7 +9,8 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const ProjectCard = ({ project }) => {
     return (
@@ -33,19 +34,25 @@ const ProjectCard = ({ project }) => {
                 </div>
             </CardContent>
             <CardFooter className="flex gap-4 p-6 pt-4 border-t border-border/10 relative z-10">
-                <Button variant="outline" size="sm" asChild className="border-border hover:bg-muted/50 w-full group">
-                    <a href={project.githubLink || "#"} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-2 group-hover:text-purple-400 transition-colors" />
-                        GitHub
-                    </a>
-                </Button>
+                <a 
+                    href={project.githubLink || "#"} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={cn(buttonVariants({ variant: "outline", size: "sm" }), "border-border hover:bg-muted/50 w-full group")}
+                >
+                    <Github className="w-4 h-4 mr-2 group-hover:text-purple-400 transition-colors" />
+                    GitHub
+                </a>
                 {project.liveLink && (
-                    <Button variant="default" size="sm" asChild className="bg-purple-600 hover:bg-purple-700 w-full group">
-                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Live Demo
-                        </a>
-                    </Button>
+                    <a 
+                        href={project.liveLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className={cn(buttonVariants({ variant: "default", size: "sm" }), "bg-purple-600 hover:bg-purple-700 w-full group")}
+                    >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live Demo
+                    </a>
                 )}
             </CardFooter>
         </Card>

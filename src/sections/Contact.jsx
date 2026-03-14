@@ -99,7 +99,7 @@ const Contact = () => {
                                 <Input
                                     id="name"
                                     name="name"
-                                    placeholder="John Doe"
+                                    placeholder="Your full name"
                                     autoComplete="name"
                                     value={formData.name}
                                     onChange={handleChange}
@@ -113,7 +113,7 @@ const Contact = () => {
                                     id="email"
                                     name="email"
                                     type="email"
-                                    placeholder="john@example.com"
+                                    placeholder="your@email.com"
                                     autoComplete="email"
                                     value={formData.email}
                                     onChange={handleChange}
@@ -127,7 +127,7 @@ const Contact = () => {
                                     id="message"
                                     name="message"
                                     rows={4}
-                                    placeholder="I'd love to chat about..."
+                                    placeholder="Write your message here..."
                                     value={formData.message}
                                     onChange={handleChange}
                                     required

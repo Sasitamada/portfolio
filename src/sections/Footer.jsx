@@ -20,7 +20,7 @@ const Footer = () => {
                             Tamada Sasi Kiran<span></span>
                         </a>
                         <p className="text-muted-foreground max-w-xs mt-4 leading-relaxed text-sm">
-                            Sasi Tamada | Full Stack Developer specializing in Data Science and modern web applications.
+                            Full Stack Developer specializing in Data Science and modern web applications.
                         </p>
                     </div>
 

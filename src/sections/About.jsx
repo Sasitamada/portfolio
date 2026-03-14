@@ -1,5 +1,5 @@
-import React from "react";
 import { User } from "lucide-react";
+import profileImg from "../assets/profile.jpg";
 
 const About = () => {
     return (
@@ -17,22 +17,27 @@ const About = () => {
                 <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
                     <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                         <p className="animate-fade-in-up">
-                            Hello! I'm <span className="text-purple-400 font-medium">Tamada Sasi Kiran</span>, a B.Tech CSE (Data Science) graduate passionate about full-stack web development, API integration, and problem-solving.
+                            Hello! I'm <span className="text-purple-400 font-medium">Tamada Sasi Kiran</span>, a B.Tech CSE (Data Science) graduate and Full-Stack Developer focused on building modern web applications and AI-powered tools.
                         </p>
                         <p className="animate-fade-in-up" style={{ animationDelay: "100ms" }}>
-                            I have a strong foundation in programming and modern web technologies. My focus is on creating modern UI experiences using React while ensuring robust and scalable backend systems with Node.js and Express.
+                            I develop responsive user interfaces with React and scalable backend APIs using Node.js, Express, and FastAPI, along with efficient database design and API integrations.
                         </p>
                         <p className="animate-fade-in-up" style={{ animationDelay: "200ms" }}>
-                            I am a continuous learner, committed to improving my skills and delivering high-quality digital products. Whether it's database design or frontend crafting, I strive for clean code and user-centric functionality.
+                            I am also exploring Generative AI, AI Agents, and Voice AI, building intelligent applications using platforms like ElevenLabs.
+                        </p>
+                        <p className="animate-fade-in-up" style={{ animationDelay: "300ms" }}>
+                            I enjoy learning new technologies and creating clean, efficient, and user-focused digital solutions.
                         </p>
                     </div>
 
                     <div className="relative group mx-auto w-full max-w-sm rounded-[2rem] p-1 bg-gradient-to-br from-purple-500/50 via-purple-500/20 to-transparent">
-                        <div className="w-full aspect-square rounded-[1.8rem] bg-card flex flex-col items-center justify-center p-8 text-center overflow-hidden relative shadow-[0_0_30px_rgba(170,59,255,0.1)] transition-transform duration-500 hover:scale-[1.02]">
+                        <div className="w-full aspect-square rounded-[1.8rem] bg-card flex flex-col items-center justify-end overflow-hidden relative shadow-[0_0_30px_rgba(170,59,255,0.1)] transition-transform duration-500 hover:scale-[1.02] group">
+                            <img 
+                                src={profileImg} 
+                                alt="Tamada Sasi Kiran" 
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
                             <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            <User className="h-24 w-24 text-purple-400/50 mb-6 group-hover:scale-110 transition-transform duration-500" />
-                            <h3 className="text-2xl font-bold text-foreground relative z-10">Data Science & Web</h3>
-                            <p className="text-muted-foreground mt-2 relative z-10">B.Tech CSE Graduate</p>
                         </div>
                     </div>
                 </div>
