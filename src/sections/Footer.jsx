@@ -17,7 +17,7 @@ const Footer = () => {
                             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                             className="text-2xl font-bold tracking-tighter hover:text-purple-400 transition-colors inline-block"
                         >
-                            TAMADA SASI KIRAN<span></span>
+                            Tamada Sasi Kiran<span></span>
                         </a>
                         <p className="text-muted-foreground max-w-xs mt-4 leading-relaxed text-sm">
                             Sasi Tamada | Full Stack Developer specializing in Data Science and modern web applications.

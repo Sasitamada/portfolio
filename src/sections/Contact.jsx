@@ -24,7 +24,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-16 md:py-24 px-6 md:px-12 bg-background border-t border-border/10 relative">
+        <section id="contact" className="py-16 md:py-24 px-6 md:px-12 bg-background border-t border-border/10 relative overflow-hidden">
             <div className="absolute top-0 right-1/4 w-[60vh] h-[60vh] bg-purple-600/5 rounded-full blur-3xl -z-10 translate-x-1/2 translate-y-1/4"></div>
 
             <div className="container mx-auto max-w-6xl">
