@@ -22,7 +22,7 @@ const Skills = () => {
         {
             title: "Tools",
             icon: <Wrench className="text-purple-400 w-6 h-6" />,
-            skills: ["Git", "GitHub", "VS Code", "Cursor"],
+            skills: ["Git", "GitHub"],
         },
     ];
 
