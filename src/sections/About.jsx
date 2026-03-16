@@ -81,10 +81,6 @@ const About = () => {
                                     ))}
                                 </div>
                             </div>
-                            <div className="flex justify-between items-center py-2">
-                                <span className="text-muted-foreground font-medium">Soft Skills</span>
-                                <span className="text-foreground text-sm">Collaboration, Communication, Adaptability</span>
-                            </div>
                         </div>
                     </div>
                 </div>
