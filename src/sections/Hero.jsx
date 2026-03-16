@@ -29,7 +29,7 @@ const Hero = () => {
             </div>
 
             <div className="container mx-auto max-w-6xl relative z-10 flex flex-col items-center text-center">
-                <h1 className="text-3xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-purple-400 mb-6 drop-shadow-sm leading-tight max-w-4xl mx-auto">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-purple-400 mb-4 md:mb-6 drop-shadow-sm leading-[1.1] max-w-4xl mx-auto">
                     Tamada <br className="md:hidden" />
                     <span>Sasi Kiran</span>
                 </h1>

@@ -32,7 +32,7 @@ const Contact = () => {
                     <div className="p-3 bg-purple-500/10 rounded-xl border border-purple-500/20 mb-4">
                         <Mail className="h-8 w-8 text-purple-400" />
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
                         Get In Touch
                     </h2>
                     <p className="text-muted-foreground max-w-2xl text-base md:text-lg">

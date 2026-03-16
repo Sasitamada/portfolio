@@ -9,12 +9,12 @@ const About = () => {
                     <div className="p-3 bg-purple-500/10 rounded-xl border border-purple-500/20">
                         <User className="h-6 w-6 text-purple-400" />
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
                         About Me
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 text-center md:text-left">
                     <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                         <p className="animate-fade-in-up">
                             Hello! I'm <span className="text-purple-400 font-medium">Tamada Sasi Kiran</span>, a B.Tech CSE (Data Science) graduate and Full-Stack Developer focused on building modern web applications and AI-powered tools.
@@ -42,7 +42,7 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-12 items-start mt-12 pt-12 border-t border-border/10">
+                <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start mt-8 md:mt-12 pt-12 border-t border-border/10 text-left">
                     <div className="space-y-6">
                         <h3 className="text-2xl font-bold text-foreground">Education</h3>
                         <div className="space-y-4">

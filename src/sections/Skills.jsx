@@ -7,7 +7,7 @@ const Skills = () => {
         {
             title: "Languages",
             icon: <Laptop className="text-purple-400 w-6 h-6" />,
-            skills: ["Python", "JavaScript", "C", "HTML", "CSS"],
+            skills: ["Python", "JavaScript", "C"],
         },
         {
             title: "Technologies",
@@ -46,7 +46,7 @@ const Skills = () => {
                     <div className="p-3 bg-purple-500/10 rounded-xl border border-purple-500/20">
                         <Code2 className="h-6 w-6 text-purple-400" />
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground text-center">
+                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground text-center">
                         Skills
                     </h2>
                 </div>

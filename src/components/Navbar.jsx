@@ -1,16 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Menu, X, Instagram, Linkedin, Github, Mail, User } from "lucide-react";
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const navRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
         };
+
+        const handleClickOutside = (event) => {
+            if (navRef.current && !navRef.current.contains(event.target)) {
+                setMobileMenuOpen(false);
+            }
+        };
+
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        document.addEventListener("mousedown", handleClickOutside);
+        
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
     }, []);
 
     const navLinks = [
@@ -38,8 +51,9 @@ const Navbar = () => {
 
     return (
         <nav
+            ref={navRef}
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-                ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm py-3"
+                ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-sm py-3"
                 : "bg-transparent py-5"
                 }`}
         >
@@ -94,32 +108,39 @@ const Navbar = () => {
 
             {/* Mobile Nav */}
             {mobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-md border-b border-border py-4 px-6 flex flex-col gap-4 shadow-lg">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            onClick={(e) => scrollToSection(e, link.href)}
-                            className="text-lg font-medium text-foreground py-2 border-b border-border/50"
-                        >
-                            {link.name}
-                        </a>
-                    ))}
-                    <div className="flex items-center gap-6 mt-4 pt-4 border-t border-border/50">
-                        {socialLinks.map((social) => (
+                <>
+                    <div 
+                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[-1] md:hidden"
+                        onClick={() => setMobileMenuOpen(false)}
+                    />
+                    <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border py-8 px-6 flex flex-col gap-6 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-300">
+                        {navLinks.map((link) => (
                             <a
-                                key={social.name}
-                                href={social.href}
-                                target={social.name === "Email" ? "_self" : "_blank"}
-                                rel="noopener noreferrer"
-                                className="p-2 bg-purple-500/10 text-purple-400 rounded-lg"
-                                aria-label={social.name}
+                                key={link.name}
+                                href={link.href}
+                                onClick={(e) => scrollToSection(e, link.href)}
+                                className="text-2xl font-bold text-foreground py-2 border-b border-border/50 flex justify-between items-center group"
                             >
-                                <social.icon size={22} />
+                                {link.name}
+                                <span className="opacity-0 group-hover:opacity-100 transition-opacity text-purple-400">→</span>
                             </a>
                         ))}
+                        <div className="flex items-center gap-6 mt-6 pt-6 border-t border-border/50">
+                            {socialLinks.map((social) => (
+                                <a
+                                    key={social.name}
+                                    href={social.href}
+                                    target={social.name === "Email" ? "_self" : "_blank"}
+                                    rel="noopener noreferrer"
+                                    className="p-3 bg-purple-500/10 text-purple-400 rounded-xl hover:bg-purple-500/20 transition-all"
+                                    aria-label={social.name}
+                                >
+                                    <social.icon size={24} />
+                                </a>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                </>
             )}
         </nav>
     );
