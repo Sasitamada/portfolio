@@ -26,7 +26,7 @@ const Projects = () => {
                         <FolderGit2 className="h-8 w-8 text-purple-400" />
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4">
-                        Featured Projects
+                        Projects
                     </h2>
                     <p className="text-muted-foreground max-w-2xl text-lg">
                         A selection of my recent work showing my capability in building full-stack applications and solving complex problems.
